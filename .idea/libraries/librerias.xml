@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="librerias">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/librerias/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/log4j-api-2.18.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/poi-ooxml-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/pdfbox-io-3.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/poi-ooxml-full-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/poi-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/pdfbox-3.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/commons-compress-1.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/xmlbeans-5.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/mysql.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/fontbox-3.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/librerias/log4j-core-2.18.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
