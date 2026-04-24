@@ -493,11 +493,11 @@ public class MainController implements ControladorVista, Pausable {
         confirmacion.setContentText("Esta acción registrará el traspaso y marcará los artículos correspondientes.");
 
         confirmacion.showAndWait().ifPresent(response -> {
-            if (response == ButtonType.OK) {
-                if (overlayCarga != null) {
-                    overlayCarga.mostrar();
-                }
-                String nota = comentario != null ? comentario.getText() : "";
+                if (response == ButtonType.OK) {
+                    if (overlayCarga != null) {
+                        overlayCarga.mostrar();
+                    }
+                    String nota = comentario != null ? comentario.getText() : "";
 
                 // Obtener nombre de la sucursal destino
                 String nombreSucursalDestino = buscador.getValue();
@@ -545,9 +545,15 @@ public class MainController implements ControladorVista, Pausable {
                     }
                 });
 
-                Thread hilo = new Thread(task);
-                hilo.setDaemon(true);
-                hilo.start();
+                javafx.animation.PauseTransition pausaCarga = new javafx.animation.PauseTransition(
+                        javafx.util.Duration.millis(80)
+                );
+                pausaCarga.setOnFinished(evt -> {
+                    Thread hilo = new Thread(task);
+                    hilo.setDaemon(true);
+                    hilo.start();
+                });
+                pausaCarga.play();
             }
         });
 
