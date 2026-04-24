@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            prefWidth="700" prefHeight="500"
+            style="-fx-background-color: white; -fx-padding: 20;"
+            fx:controller="Formularios.controller.controllerNuevaSucursal"
+            stylesheets="@/Formularios/style/estilos.css">
+
+    <!-- Título -->
+    <top>
+        <Label fx:id="titulo" text="Agregar sucursal"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <!-- Contenido principal -->
+    <center>
+        <VBox spacing="15" alignment="TOP_LEFT" style="-fx-padding: 20;">
+
+            <HBox spacing="20">
+                <VBox spacing="5">
+                    <Label text="Nombre:"/>
+                    <TextField fx:id="txtNombre" prefWidth="380" maxWidth="380"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5">
+                    <Label text="C.P:"/>
+                    <TextField fx:id="txtCP" prefWidth="120" maxWidth="120"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="País:"/>
+                    <TextField fx:id="txtPais" prefWidth="170" maxWidth="170"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="Estado:"/>
+                    <TextField fx:id="txtEstado" prefWidth="170" maxWidth="170"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="Localidad:"/>
+                    <TextField fx:id="txtLocalidad" prefWidth="170" maxWidth="170"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5">
+                    <Label text="Ciudad:"/>
+                    <TextField fx:id="txtCiudad" prefWidth="250" maxWidth="250"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="Colonia:"/>
+                    <ComboBox fx:id="cmbColonia" editable="true" prefWidth="250" maxWidth="250"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5">
+                    <Label text="Domicilio:"/>
+                    <TextField fx:id="txtDomicilio" prefWidth="250" maxWidth="250"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="No ext:"/>
+                    <TextField fx:id="txtNumeroExt" prefWidth="50" maxWidth="50"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="No int:"/>
+                    <TextField fx:id="txtNumeroInt" prefWidth="50" maxWidth="50"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Correo electrónico:"/>
+                    <TextField fx:id="txtCorreo" prefWidth="300" maxWidth="300"/>
+                </VBox>
+
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Teléfono:"/>
+                    <TextField fx:id="txtTelefono" prefWidth="300" maxWidth="300"/>
+                </VBox>
+            </HBox>
+
+        </VBox>
+    </center>
+
+    <!-- Botón Guardar -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <Button text="Guardar" fx:id="btnGuardar" styleClass="boton" onAction="#guardarSucursal"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

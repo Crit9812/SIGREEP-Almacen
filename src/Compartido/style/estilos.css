@@ -1,0 +1,256 @@
+.root {
+    -fx-background-color: #f0f0f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+/* ---------------------------- ENCABEZADO ----------------------------------------------*/
+
+.navbar_top {
+    -fx-background-color: #333;
+    -fx-padding: 10 0 0 10;
+    -fx-spacing: 20;
+}
+.busqueda {
+    -fx-background-color: #fff;
+    -fx-font-size: 14px;
+    -fx-translate-x: 100px;
+    -fx-translate-y: 8px;
+    -fx-background-radius: 10px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-image: url("/img/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5 50%;
+    -fx-background-size: 16 16;
+    -fx-padding: 0 0 0 30px;
+}
+
+.contenedor-navbar-top {
+    -fx-padding: 0 0 0 0;
+    -fx-spacing: 10;
+    -fx-alignment: center-right;
+}
+
+.labelUsuario {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-alignment: center-right;
+}
+
+.tituloVentana {
+    -fx-text-fill: #333;
+    -fx-border-width: 0;
+    -fx-border-radius: 10px 0 0 0;
+    -fx-background-radius: 10px 0 0 0;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.botones-navbar-top {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.botones-navbar-top:hover {
+    -fx-cursor: hand;
+}
+
+/*------------------------- MENÚ LATERAL -----------------------------------*/
+
+.navbar {
+    -fx-background-color: #91D485;
+    -fx-padding: 0;
+}
+
+.navbar-hbox {
+    -fx-spacing: 0;
+    -fx-alignment: top-left;
+    -fx-max-width: 40px;
+    -fx-min-width: 50;
+}
+
+.navbar Button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.boton:hover {
+    -fx-background-color: white;
+}
+
+.navbar-hbox:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.hover-label {
+    -fx-background-color: #fff;
+    -fx-text-fill: #333;
+    -fx-padding: 5px 0px 5px 15px;
+    -fx-border-color: black black black transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 0px 5px 5px 0px;
+    -fx-background-radius: 0px 5px 5px 0px;
+}
+
+.icon-button {
+    -fx-background-color: YELLOW;
+    -fx-cursor: hand;
+    -fx-padding: 5px;
+    -fx-border-color: YELLOW;
+}
+
+.contenedor-navbar-top .button {
+    -fx-padding: 0 1 0 1;
+}
+
+/* ---------------------------- ALERTA ----------------------------------------------*/
+
+.capaAlerta {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-opacity: 0;
+    -fx-alignment: center;
+}
+
+.alertaModal {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-spacing: 0;
+}
+
+.alertaEncabezado {
+    -fx-background-color: #333;
+    -fx-background-radius: 10 10 0 0;
+    -fx-alignment: center-left;
+    -fx-pref-height: 40;
+}
+
+.alertaTitulo {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 0 15;
+}
+
+.alertaContenido {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+
+}
+
+.alertaMensaje {
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+.alertaBoton {
+    -fx-padding: 6 20;
+    -fx-background-radius: 5;
+}
+
+
+/* Estilo para el menú contextual de sugerencias */
+.context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0 1px 1px 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+
+    /*  Limitar altura */
+    -fx-max-height: 300px;
+    -fx-pref-height: 300px;
+
+    /* Eliminar padding por defecto */
+    -fx-padding: 0;
+}
+
+/* Hacer que el contenido del menú sea scrollable */
+.context-menu .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.context-menu .viewport {
+    -fx-background-color: transparent;
+}
+
+.context-menu .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12px;
+}
+
+.context-menu .scroll-bar:vertical .thumb {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 5px;
+}
+
+.context-menu .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #999999;
+}
+
+.context-menu .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+/* Estilo base para los items de sugerencia */
+.sugerencia-item {
+    -fx-background-color: transparent;
+    -fx-padding: 8px 12px;
+    -fx-text-fill: #333333;
+    -fx-wrap-text: true;
+    -fx-max-width: 380px;
+}
+
+/* Estilo para el item seleccionado por teclado (focused) o hover */
+.menu-item:focused .sugerencia-item,
+.menu-item:hover .sugerencia-item,
+.sugerencia-item:hover,
+.sugerencia-item:focused {
+    -fx-background-color: #e8f5e6;
+    -fx-text-fill: #333333;
+}
+
+/* Para mantener el texto legible en el label completo cuando está seleccionado */
+.menu-item:focused .sugerencia-item .label,
+.menu-item:hover .sugerencia-item .label,
+.sugerencia-item:hover .label,
+.sugerencia-item:focused .label {
+    -fx-text-fill: #333333;
+}
+
+/* Asegurar que el fondo del CustomMenuItem también se herede */
+.menu-item .label {
+    -fx-background-color: transparent;
+}
+
+/* Quitar el borde azul por defecto del menú-item cuando está focused */
+.menu-item:focused {
+    -fx-background-color: transparent;
+}
+
+/* Estilo para los CustomMenuItem */
+.custom-menu-item {
+    -fx-background-color: transparent;
+}
+
+/* Clase para selección manual) */
+.sugerencia-seleccionada {
+    -fx-background-color: #e8f5e6;
+    -fx-text-fill: #333333;
+}
+
+.context-menu {
+    -fx-translate-y: -1px;
+}
+
+.context-menu .scroll-arrow {
+    -fx-shape: "";
+    -fx-background-color: transparent;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+}

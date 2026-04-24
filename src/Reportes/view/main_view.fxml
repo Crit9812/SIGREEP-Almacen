@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:controller="Reportes.controller.MainController"
+           fx:id="root"
+           stylesheets="@/Reportes/style/estilos.css">
+
+    <VBox fx:id="contenedor" styleClass="contenedor" alignment="CENTER">
+        <GridPane fx:id="buttonGrid" styleClass="contenedor-opciones"
+                  hgap="10" vgap="10"
+                  maxWidth="Infinity" maxHeight="Infinity">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" percentHeight="100" />
+            </rowConstraints>
+
+            <!-- Fila única con 4 botones -->
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    text="Inventario" onAction="#ventanaInventario"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconInventario" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/inventario.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    text="Historial por artículo" onAction="#ventanaHistorialArticulo"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconHistorialArticulo" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/historial_a.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    text="Historial por factura" onAction="#ventanaHistorial"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconHistorialFactura" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/historial_f.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnUtilidades" styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    text="Utilidades" onAction="#ventanaUtilidades"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconUtilidades" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/utilidades_f.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </GridPane>
+    </VBox>
+</StackPane>

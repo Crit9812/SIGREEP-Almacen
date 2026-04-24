@@ -1,0 +1,27 @@
+.root {
+    -fx-background-color: #333;
+}
+
+.label {
+    -fx-font-size: 14px;
+}
+
+.split-pane-divider, .split-pane {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.tituloVentana {
+    -fx-text-fill: #333;
+    -fx-background-color: #f0f0f0;
+    -fx-border-width: 0;
+    -fx-border-radius: 10px 0 0 0;
+    -fx-background-radius: 10px 0 0 0;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+
+
+

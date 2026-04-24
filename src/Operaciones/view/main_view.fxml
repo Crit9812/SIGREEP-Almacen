@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:controller="Operaciones.controller.MainController"
+           fx:id="root"
+           stylesheets="@/Operaciones/style/estilos.css">
+
+    <VBox fx:id="contenedor" styleClass="contenedor" alignment="CENTER">
+        <GridPane fx:id="buttonGrid" styleClass="contenedor-opciones"
+                  hgap="10" vgap="10"
+                  maxWidth="Infinity" maxHeight="Infinity">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" percentHeight="50" />
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" percentHeight="50" />
+            </rowConstraints>
+
+            <!-- Fila 1 -->
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    text="Traspaso entrada" onAction="#ventanaTraspasoEntrada"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconTraspasoEntrada" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/traspaso_entrada.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    text="Traspaso Salida" onAction="#ventanaTraspasoSalida"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconTraspasoSalida" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/traspaso_salida.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    text="Compra" onAction="#ventanaCompra"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconCompra" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/compra.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    text="Venta" onAction="#ventanaVenta"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconVenta" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/venta.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <!-- Fila 2 -->
+            <Button styleClass="grid-button" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    text="Pedidos" onAction="#ventanaPedidos"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconPedidos" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/pedidos.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnAjusteInventario" styleClass="grid-button" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    text="Ajuste inventario" onAction="#ventanaAjusteInventario"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconAjuste" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/ajuste_inventario.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnRegistrarUsuario" styleClass="grid-button" GridPane.rowIndex="1" GridPane.columnIndex="2"
+                    text="Registrar usuario" onAction="#ventanaRegistrarUsuario"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="iconRegistro" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/registrar_usuario.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button styleClass="grid-button" GridPane.rowIndex="1" GridPane.columnIndex="3"
+                    visible="false" managed="false" />
+        </GridPane>
+    </VBox>
+</StackPane>

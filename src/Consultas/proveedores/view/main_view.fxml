@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:controller="Consultas.proveedores.controller.MainController"
+           fx:id="root"
+           stylesheets="@/Consultas/proveedores/style/estilos.css">
+
+    <VBox fx:id="contenedor" styleClass="contenedor" VBox.vgrow="ALWAYS">
+        <!-- Barra de herramientas (botones + buscador) -->
+        <VBox styleClass="opciones" VBox.vgrow="NEVER">
+            <HBox fx:id="rootHBox" spacing="0" alignment="CENTER_LEFT">
+                <!-- Botón Agregar -->
+                <Button styleClass="botones" onMouseClicked="#formularioNuevoProveedor">
+                    <graphic>
+                        <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                            <image>
+                                <Image url="@/img/agregar.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets left="30"/>
+                    </HBox.margin>
+                </Button>
+                <Label fx:id="lblAgregar" text="Agregar" styleClass="labels">
+                    <HBox.margin>
+                        <Insets left="10"/>
+                    </HBox.margin>
+                </Label>
+
+                <!-- Botón Importar -->
+                <Button styleClass="botones" onMouseClicked="#importarDatos">
+                    <graphic>
+                        <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                            <image>
+                                <Image url="@/img/importar.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets left="30"/>
+                    </HBox.margin>
+                </Button>
+                <Label fx:id="lblImportar" text="Importar" styleClass="labels">
+                    <HBox.margin>
+                        <Insets left="10"/>
+                    </HBox.margin>
+                </Label>
+
+                <!-- Botón Exportar -->
+                <Button styleClass="botones" onMouseClicked="#exportarDatos">
+                    <graphic>
+                        <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                            <image>
+                                <Image url="@/img/exportar.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets left="30"/>
+                    </HBox.margin>
+                </Button>
+                <Label fx:id="lblExportar" text="Exportar" styleClass="labels">
+                    <HBox.margin>
+                        <Insets left="10"/>
+                    </HBox.margin>
+                </Label>
+
+                <!-- Botón Plantilla -->
+                <Button styleClass="botones" onMouseClicked="#exportarPlantilla">
+                    <graphic>
+                        <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                            <image>
+                                <Image url="@/img/plantilla.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets left="30"/>
+                    </HBox.margin>
+                </Button>
+                <Label fx:id="lblPlantilla" text="Descargar plantilla" styleClass="labels">
+                    <HBox.margin>
+                        <Insets left="10"/>
+                    </HBox.margin>
+                </Label>
+
+                <!-- Espaciador -->
+                <Region fx:id="expansor" HBox.hgrow="ALWAYS" minWidth="10"/>
+
+                <!-- Buscador -->
+                <TextField fx:id="buscador" promptText="Buscar proveedor por nombre" styleClass="barraBusqueda">
+                    <HBox.margin>
+                        <Insets right="25"/>
+                    </HBox.margin>
+                </TextField>
+            </HBox>
+        </VBox>
+
+        <!-- Contenedor de la tabla -->
+        <VBox fx:id="contenedorTabla" styleClass="tabla" alignment="CENTER" >
+            <padding>
+                <Insets left="40" right="40" top="25" bottom="10"/>
+            </padding>
+            <TableView fx:id="contenidoTabla" styleClass="contenidoTabla" VBox.vgrow="ALWAYS">
+                <placeholder>
+                    <Label text="No hay resultados que mostrar" styleClass="placeholder-label"/>
+                </placeholder>
+                <columns>
+                    <TableColumn fx:id="colSelect" prefWidth="70" />
+                    <TableColumn fx:id="colID" text="id" prefWidth="70" />
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="250" />
+                    <TableColumn fx:id="colRepresentante" text="Representante" prefWidth="250" />
+                    <TableColumn fx:id="colRFC" text="RFC" prefWidth="200" />
+                    <TableColumn fx:id="colCURP" text="CURP" prefWidth="220" />
+                    <TableColumn fx:id="colRazonSocial" text="RazonSocial" prefWidth="200" />
+                    <TableColumn fx:id="colCorreo" text="Correo" prefWidth="250" />
+                    <TableColumn fx:id="colTelefono" text="Telefono" prefWidth="100" />
+                    <TableColumn fx:id="colCP" text="CP" prefWidth="70" />
+                    <TableColumn fx:id="colPais" text="Pais" prefWidth="150" />
+                    <TableColumn fx:id="colEstado" text="Estado" prefWidth="150" />
+                    <TableColumn fx:id="colCiudad" text="Ciudad" prefWidth="250" />
+                    <TableColumn fx:id="colLocalidad" text="Localidad" prefWidth="250" />
+                    <TableColumn fx:id="colColonia" text="Colonia" prefWidth="250" />
+                    <TableColumn fx:id="colDomicilio" text="Domicilio" prefWidth="250" />
+                    <TableColumn fx:id="colNumeroExt" text="NumeroExt" prefWidth="100" />
+                    <TableColumn fx:id="colNumeroInt" text="NumeroInt" prefWidth="100" />
+                </columns>
+            </TableView>
+        </VBox>
+    </VBox>
+</StackPane>

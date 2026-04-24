@@ -1,0 +1,92 @@
+#root {
+    -fx-background-color: #f0f0f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.config-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-fit-to-width: true;
+}
+
+.config-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.contenedor-config {
+    -fx-spacing: 20;
+}
+
+.titulo-config {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.panel-config {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #d9d9d9;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+.subtitulo-config {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.etiqueta-campo {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.valor-campo {
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+}
+
+.btn-config {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-config:hover {
+    -fx-background-color: #444;
+}
+
+.boton-ocultar-contrasena {
+    -fx-background-color: #fff;
+    -fx-border-color: #b2b2b2;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 4 8;
+}
+
+.seccion-atajo {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 6 0 0 0;
+}
+
+.texto-atajo {
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+    -fx-line-spacing: 2px;
+}
+
+.split-pane-divider, .split-pane {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}

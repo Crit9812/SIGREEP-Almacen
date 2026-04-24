@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.geometry.Insets?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="Operaciones.ajusteInventario.controller.MainController"
+           stylesheets="@/Operaciones/ajusteInventario/style/estilos.css">
+
+    <BorderPane fx:id="mainLayout">
+        <center>
+            <SplitPane dividerPositions="0.03">
+                <VBox fx:id="contenedor" styleClass="contenedor">
+                    <VBox styleClass="opciones">
+                        <HBox fx:id="rootHBox" spacing="0" alignment="CENTER_LEFT">
+                            <!-- IZQUIERDA: checkbox + eliminar -->
+                            <CheckBox fx:id="miCheckBox" text="Seleccionar todo" styleClass="custom-check">
+                                <HBox.margin>
+                                    <Insets left="25"/>
+                                </HBox.margin>
+                            </CheckBox>
+                            <Button fx:id="btnEliminar" styleClass="botones" onMouseClicked="#eliminarSeleccionados">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image><Image url="@/img/eliminar.png"/></image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblEliminar" text="Eliminar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+                            <Region fx:id="expansor"/>
+
+                           <Button fx:id="btnAgregar" styleClass="botones" onMouseClicked="#abrirFormularioAgregar">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image><Image url="@/img/agregar.png"/></image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblAgregar" text="Agregar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+                            <Button fx:id="btnQuitar" styleClass="botones" onMouseClicked="#abrirFormularioQuitar">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image><Image url="@/img/quitar1.png"/></image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblQuitar" text="Quitar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets  top="0" right="40" bottom="0" left="10"/>
+                                </HBox.margin>
+                            </Label>
+                        </HBox>
+                    </VBox>
+
+                    <!-- TABLA -->
+                    <VBox fx:id="contenedorTabla" styleClass="tabla" alignment="CENTER">
+                        <padding>
+                            <Insets left="40" right="40" top="30"/>
+                        </padding>
+                        <TableView fx:id="contenidoTabla" styleClass="contenidoTabla">
+                            <columns>
+                                <TableColumn fx:id="colSelect" prefWidth="70" />
+                                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="120" />
+                                <TableColumn fx:id="colClaveProduct" text="ID producto" prefWidth="120" />
+                                <TableColumn fx:id="colProducto" text="Producto" prefWidth="200"/>
+                                <TableColumn fx:id="colDescripcionProducto" text="Descripcion" prefWidth="290" />
+                                <TableColumn fx:id="colCantidad" text="Cantidad" prefWidth="120"/>
+                                <TableColumn fx:id="colLote" text="Lote" prefWidth="120"/>
+                                <TableColumn fx:id="colCaducidad" text="Caducidad" prefWidth="150" />
+                                <TableColumn fx:id="colUbicacion" text="Ubicación" prefWidth="150" />
+                                <TableColumn fx:id="colNota" text="Nota" prefWidth="360" />
+                                <TableColumn fx:id="colPrecioUnitario" text="Precio unitario" prefWidth="150" />
+                                <TableColumn fx:id="colPrecioIva" text="Precio con IVA" prefWidth="150"/>
+                                <TableColumn fx:id="colPrecioBruto" text="Precio bruto" prefWidth="150" />
+                                <TableColumn fx:id="colPrecioTotaal" text="Precio total" prefWidth="170" />
+                            </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT">
+                            <Label fx:id="lblTotal" text="Total:" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets right="10"/>
+                                </HBox.margin>
+                            </Label>
+                            <TextField fx:id="totalAjuste"
+                                       editable="false"
+                                       styleClass="factura"
+                                       promptText="Total">
+                            </TextField>
+                        </HBox>
+                    </VBox>
+
+                    <!-- COMENTARIO (SEPARADO DEL TOTAL) -->
+                    <HBox fx:id="contenedorComentario"
+                          spacing="8"
+                          alignment="CENTER_LEFT">
+
+
+                        <Label fx:id="lblComentario" text="Comentario:" styleClass="labels">
+                            <HBox.margin>
+                                <Insets left="40"/>
+                            </HBox.margin>
+                        </Label>
+
+                        <TextField fx:id="comentario" HBox.hgrow="ALWAYS" prefHeight="35">
+                            <HBox.margin>
+                                <Insets right="25" left="8" top="20"/>
+                            </HBox.margin>
+                        </TextField>
+
+                        <HBox fx:id="contenedorBtnConfirmar" alignment="CENTER_RIGHT">
+                            <VBox alignment="CENTER_RIGHT" spacing="8">
+                                <Button fx:id="botonConfirmar"
+                                        styleClass="botonConfirmar"
+                                        text="Confirmar"
+                                        onAction="#guardarAjuste">
+                                    <VBox.margin>
+                                        <Insets right="40" top="20"/>
+                                    </VBox.margin>
+                                </Button>
+                            </VBox>
+                        </HBox>
+                    </HBox>
+                </VBox>
+            </SplitPane>
+        </center>
+    </BorderPane>
+</StackPane>

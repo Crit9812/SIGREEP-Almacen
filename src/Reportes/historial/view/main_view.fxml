@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.geometry.Insets?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="Reportes.historial.controller.MainController"
+           stylesheets="@/Reportes/historial/style/estilos.css">
+
+    <BorderPane fx:id="mainLayout" >
+        <center>
+            <SplitPane dividerPositions="0.03">
+                <VBox fx:id="contenedor" styleClass="contenedor">
+                    <VBox fx:id="opciones"  styleClass="opciones">
+                        <!-- Fila 1 -->
+                        <HBox fx:id="fila1" spacing="0" alignment="CENTER_LEFT">
+                            <Button styleClass="botones" onMouseClicked="#mostrarSelectorColumnas">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true" >
+                                        <image>
+                                            <Image url="@/img/quitar_columna.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblQuitar" text="Modificar columnas" styleClass="labels" onMouseClicked="#mostrarSelectorColumnas">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+                            <Button styleClass="botones" onMouseClicked="#mostrarOrdenPopup">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/ordenar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblOrdenar" text="Ordenar" styleClass="labels" onMouseClicked="#mostrarOrdenPopup">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+                            <Button styleClass="botones" onMouseClicked="#exportarExcel">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/exportar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblExportar" text="Exportar" styleClass="labels" onMouseClicked="#exportarExcel">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+                            <Region fx:id="expansorBusqueda"/>
+
+                            <TextField fx:id="buscarFactura" promptText="Buscar por no. de factura" styleClass="barraBusqueda">
+                                <HBox.margin>
+                                    <Insets right="25"/>
+                                </HBox.margin>
+                            </TextField>
+                        </HBox>
+
+                        <!-- Fila 2 -->
+                        <HBox fx:id="fila2">
+                            <ComboBox fx:id="comboFiltro" promptText="Filtrar por" styleClass="textfield">
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </ComboBox>
+                            <ComboBox fx:id="comboValor" promptText="Valor" styleClass="textfield">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </ComboBox>
+                            <Button styleClass="botones" onMouseClicked="#agregarFiltro">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/filtrar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Button>
+
+                            <Region fx:id="expansor"/>
+
+                            <Button styleClass="botones" onMouseClicked="#vistaPreviaPdf">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/vista_previa.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Label fx:id="lblVista" text="Vista previa" styleClass="labels" onMouseClicked="#vistaPreviaPdf">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+                            <Button styleClass="botones" onMouseClicked="#descargarPdf">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/descargar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblDescargar" text="Descargar" styleClass="labels" onMouseClicked="#descargarPdf">
+                                <HBox.margin>
+                                    <Insets  top="0" right="40" bottom="0" left="10"/>
+                                </HBox.margin>
+                            </Label>
+                        </HBox>
+                        <HBox fx:id="contenedorFiltros" spacing="10">
+                            <HBox.margin>
+                                <Insets left="70" top="10" bottom="0"/>
+                            </HBox.margin>
+                        </HBox>
+                    </VBox>
+
+                    <VBox fx:id="contenedorTabla" styleClass="tabla" alignment="CENTER">
+                        <padding>
+                            <Insets left="40" right="40"/>
+                        </padding>
+                        <TableView fx:id="contenidoTabla"  styleClass="contenidoTable">
+                            <columns>
+                                <TableColumn fx:id="colClaveMovimiento" text="ID del movimiento" prefWidth="150" />
+                                <TableColumn fx:id="colMovimiento" text="Movimiento" prefWidth="130" />
+                                <TableColumn fx:id="colTipoMovimiento" text="Tipo de movimiento" prefWidth="160" />
+                                <TableColumn fx:id="colFactura" text="Factura" prefWidth="120" />
+                                <TableColumn fx:id="colFecha" text="Fecha" prefWidth="140" />
+                                <TableColumn fx:id="colHora" text="Hora" prefWidth="120" />
+                                <TableColumn fx:id="colUsuario" text="Usuario" prefWidth="120" />
+                                <TableColumn fx:id="colExterno" text="Externo" prefWidth="220" />
+                                <TableColumn fx:id="colPrecioNeto" text="Precio neto" prefWidth="130" />
+                                <TableColumn fx:id="colPrecioTotal" text="Precio total" prefWidth="130" />
+                                <TableColumn fx:id="colNota" text="Nota" prefWidth="200" />
+                                <TableColumn fx:id="colEstado" text="Estado" prefWidth="120" />
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </VBox>
+            </SplitPane>
+        </center>
+    </BorderPane>
+</StackPane>

@@ -1,0 +1,212 @@
+.root {
+    -fx-background-color: #f0f0f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.split-pane-divider, .split-pane {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.contenedor{
+    -fx-background-color: #ebebeb;
+    -fx-border-color: white transparent transparent transparent;
+}
+
+.opciones {
+    -fx-background-color: #fff;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 15;
+    -fx-spacing: 15;
+}
+
+.botones {
+    -fx-background-color: #000000;
+    -fx-padding: 5 5;
+    -fx-cursor: hand;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: transparent;
+}
+
+.botones:hover {
+    -fx-background-color: #666666;
+}
+
+.labels {
+    -fx-font-size: 12pt;
+    -fx-underline: true;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.textfield {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 10pt;
+}
+
+.textfield .text-input {
+    -fx-font-weight: bold;
+}
+
+.text-field .prompt-text,
+.combo-box .prompt-text,
+.date-picker .prompt-text {
+    -fx-font-weight: normal !important;
+    -fx-text-fill: #666666;
+}
+
+
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8px 0 0 8px;
+}
+
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color: black;
+}
+
+.date-picker .date-picker-display-node {
+    -fx-background-color: white;
+    -fx-background-radius: 7px 0 0 7px;
+}
+
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.date-picker:focused {
+    -fx-border-color: #888888;
+    -fx-border-width: 1px;
+}
+
+.date-picker .text-field:focused {
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+.contenidoTable .table-cell {
+    -fx-alignment: CENTER;
+}
+
+.table-view .table-row-cell .text {
+    -fx-fill: black;
+}
+
+.table-view .table-row-cell:filled:selected,
+.table-view .table-row-cell:filled:selected:focused {
+    -fx-text-fill: black;
+    -fx-background-color: #91d485;
+}
+
+.date-picker:focused {
+    -fx-border-color: #888888;
+    -fx-border-width: 1px;
+}
+
+.tabla {
+    -fx-background-color: #ebebeb;
+}
+
+.contenidoTable {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 0 0 0 0;
+}
+
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.chip {
+    -fx-background-color: #333;
+    -fx-background-radius: 20;
+    -fx-padding: 5 10;
+    -fx-alignment: center;
+}
+
+.chip-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.chip Label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.chip-close {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.chip-close:hover {
+    -fx-text-fill: #999696;
+}
+
+.total-field {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 10pt;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 30px;
+}
+
+/* ==================== */
+/* Estilos para la tabla (igual que en historial) */
+/* ==================== */
+
+.table-view .table-row-cell .text {
+    -fx-fill: black;
+}
+
+.table-view .table-row-cell:filled:selected,
+.table-view .table-row-cell:filled:selected:focused {
+    -fx-text-fill: black;
+    -fx-background-color: #91d485;
+}
+
+.contenidoTable .table-cell {
+    -fx-alignment: CENTER;
+}

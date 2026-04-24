@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.geometry.Insets?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="Operaciones.traspasoEntrada.controller.MainController"
+           stylesheets="@/Operaciones/traspasoEntrada/style/estilos.css">
+
+    <BorderPane fx:id="mainLayout">
+        <center>
+            <SplitPane dividerPositions="0.03">
+                <VBox fx:id="contenedor" styleClass="contenedor">
+                    <VBox styleClass="opciones">
+                        <HBox fx:id="rootHBox" spacing="0" alignment="CENTER_LEFT">
+                            <CheckBox fx:id="miCheckBox" text="Seleccionar todo" styleClass="custom-check">
+                                <HBox.margin>
+                                    <Insets left="25"/>
+                                </HBox.margin>
+                            </CheckBox>
+                            <ComboBox fx:id="miComboBox" prefWidth="120" styleClass="comboBx">
+                                      <!--onMouseClicked="#comboBx">-->
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </ComboBox>
+                            <Button styleClass="botones" text="Aplicar" onAction="#aplicarAccion">
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+
+                            <Region fx:id="expansor"/>
+
+                            <Button styleClass="botones" onMouseClicked="#mostrarOrdenPopup">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/ordenar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Label fx:id="lblOrdenar" text="Ordenar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets  top="0" right="40" bottom="0" left="10"/>
+                                </HBox.margin>
+                            </Label>
+                        </HBox>
+                    </VBox>
+
+                    <!-- TABLA -->
+                    <!-- TABLA -->
+                    <VBox fx:id="contenedorTabla"  styleClass="tabla" alignment="CENTER">
+                        <padding>
+                            <Insets left="40" right="40"/>
+                        </padding>
+                        <TableView fx:id="contenidoTabla" styleClass="contenidoTable">
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <placeholder>
+                                <Label text="No hay resultados que mostrar" styleClass="placeholder-label"/>
+                            </placeholder>
+                            <columns>
+                                <!-- Columnas con tamaño fijo -->
+                                <TableColumn fx:id="colDesplegar"
+                                             prefWidth="70"
+                                             minWidth="70"
+                                             maxWidth="70"
+                                             resizable="false" />
+                                <TableColumn fx:id="colSelect"
+                                             prefWidth="70"
+                                             minWidth="70"
+                                             maxWidth="70"
+                                             resizable="false" />
+                                <TableColumn fx:id="colClaveEntrada" text="Clave"
+                                             prefWidth="70"
+                                             minWidth="70"
+                                             maxWidth="70"
+                                             resizable="false" />
+                                <TableColumn fx:id="colFecha" text="Fecha" />
+                                <TableColumn fx:id="colHora" text="Hora"
+                                             prefWidth="130"
+                                             minWidth="130"
+                                             maxWidth="130"
+                                             resizable="false" />
+                                <TableColumn fx:id="colTotal" text="Total"
+                                             prefWidth="150"
+                                             minWidth="150"
+                                             maxWidth="150"
+                                             resizable="false" />
+                                <TableColumn fx:id="colNombreSucural" text="Nombre de sucursal"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </VBox>
+            </SplitPane>
+        </center>
+    </BorderPane>
+</StackPane>

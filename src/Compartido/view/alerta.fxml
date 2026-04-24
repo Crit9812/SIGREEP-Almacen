@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="capaAlerta"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Compartido.controller.alertaController"
+      styleClass="capaAlerta"
+      stylesheets="@/Compartido/style/estilos.css"
+      visible="false"
+      alignment="CENTER">
+
+    <!-- CONTENEDOR DEL MODAL -->
+    <VBox fx:id="alertaModal"
+          styleClass="alertaModal"
+          alignment="CENTER">
+
+        <HBox styleClass="alertaEncabezado">
+            <Label fx:id="alertaTitulo"
+                   styleClass="alertaTitulo"
+                   text="Título"/>
+        </HBox>
+
+        <VBox styleClass="alertaContenido" alignment="CENTER">
+            <Label fx:id="alertaMensaje"
+                   styleClass="alertaMensaje"
+                   wrapText="true"/>
+
+            <Button text="Aceptar"
+                    styleClass="alertaBoton"
+                    onAction="#cerrarAlerta"/>
+        </VBox>
+
+    </VBox>
+
+</VBox>

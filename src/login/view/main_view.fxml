@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           styleClass="login-background">
+
+    <!-- Imagen de fondo -->
+    <ImageView fx:id="backgroundImage" preserveRatio="false" smooth="true" cache="true">
+        <image>
+            <Image url="@/img/fondo.png" />
+        </image>
+    </ImageView>
+
+    <!-- Contenedor principal -->
+    <HBox fx:id="contenedor" alignment="CENTER" styleClass="white-box">
+
+        <!-- Lado izquierdo: imagen centrada -->
+        <StackPane alignment="CENTER">
+            <ImageView fx:id="logoImage" preserveRatio="false">
+                <image>
+                    <Image url="@/img/logo-GREEP.png" />
+                </image>
+            </ImageView>
+        </StackPane>
+
+        <Region fx:id="expansor"/>
+
+        <!-- Lado derecho: formulario centrado -->
+        <VBox fx:id="formulario" alignment="CENTER" spacing="15" >
+            <Label text="INICIO DE SESIÓN" styleClass="labels-title" />
+            <Label text="Usuario:" alignment="center_left" styleClass="labels" />
+            <TextField fx:id="usernameField" promptText="Usuario"  />
+            <Label text="Contraseña:" alignment="center_left" styleClass="labels"/>
+
+            <!-- Contenedor del PasswordField con botón para mostrar/ocultar-->
+            <HBox fx:id="passwordContainer" maxWidth="Infinity" spacing="10" alignment="CENTER">
+                <PasswordField fx:id="passwordField" promptText="Contraseña" />
+                <TextField fx:id="passwordVisibleField" promptText="Contraseña" visible="false" managed="false"/>
+                <Button fx:id="botonOcultarContrasena" text="👁" styleClass="botonOcultar"
+                        onAction="#togglePasswordVisibility">
+                </Button>
+            </HBox>
+            <Button fx:id="aceptarBoton" text="Aceptar" styleClass="botones" onMouseClicked="#iniciarSesion">
+                <VBox.margin>
+                    <Insets top="25"/>
+                </VBox.margin>
+            </Button>
+        </VBox>
+    </HBox>
+
+    <fx:include fx:id="alerta" source="/Compartido/view/alerta.fxml"/>
+
+</StackPane>

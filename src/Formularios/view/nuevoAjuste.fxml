@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            prefWidth="500" prefHeight="400"
+            style="-fx-background-color: white; -fx-padding: 20;"
+            stylesheets="@/Formularios/style/estilos.css">
+
+    <!-- Título -->
+    <top>
+        <Label text="Ajuste de inventario"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="TOP_LEFT" style="-fx-padding: 20;">
+            <HBox>
+                <VBox spacing="5">
+                    <Label text="Ingresar producto por:"/>
+                    <HBox spacing="10">
+                        <VBox spacing="5">
+                            <Label text="Clave producto:"/>
+                            <TextField fx:id="txtClaveProducto" prefWidth="150" maxWidth="150"/>
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Label text="Clave alterna:"/>
+                            <TextField fx:id="txtAlterna" prefWidth="150" maxWidth="150"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Producto:"/>
+                    <TextField fx:id="txtProducto"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Descripción:"/>
+                    <TextField fx:id="txtDescripcion" style=" -fx-min-height: 40;"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Caducidad:"/>
+                    <TextField fx:id="txtCaducidad"/>
+                </VBox>
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Lote:"/>
+                    <TextField fx:id="txtLote"/>
+                </VBox>
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Ubicación:"/>
+                    <TextField fx:id="txtUbicacion"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="20">
+                <VBox>
+                    <Pane VBox.vgrow="ALWAYS"/>
+                    <Button text="Agregar"
+                            fx:id="btnAgregar"
+                            prefWidth="100"
+                            maxWidth="100"/>
+                </VBox>
+                <VBox>
+                    <Pane VBox.vgrow="ALWAYS"/>
+                    <Button text="Quitar"
+                            fx:id="btnQuitar"
+                            prefWidth="100"
+                            maxWidth="100"/>
+
+                </VBox>
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Cantidad:"/>
+                    <TextField fx:id="txtCantidad"  prefWidth="100"
+                               maxWidth="100"/>
+                </VBox>
+            </HBox>
+
+
+            <HBox spacing="20">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Precio entrada:"/>
+                    <TextField fx:id="txtPrecioEntrada"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="IVA:" prefWidth="30" minWidth="30"/>
+                    <CheckBox fx:id="checkBoxIVA"/>
+                </VBox>
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Precio con IVA:"/>
+                    <TextField fx:id="txtPrecioIVA"/>
+                </VBox>
+            </HBox>
+
+
+            <HBox alignment="CENTER_RIGHT" spacing="20">
+                <VBox spacing="5">
+                    <Label text="Precio bruto:"/>
+                    <TextField fx:id="txtPrecioBruto" prefWidth="150" maxWidth="150"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Precio total:"/>
+                    <TextField fx:id="txtPrecioTotal" prefWidth="150" maxWidth="150"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <Button text="Guardar" fx:id="btnGuardar" styleClass="boton"/>
+        </HBox>
+    </bottom>
+</BorderPane>

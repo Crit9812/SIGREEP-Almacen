@@ -1,0 +1,50 @@
+.login-background {
+    -fx-background-color: transparent;
+}
+
+.white-box {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+.botones {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #000000;
+    -fx-padding: 5 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 30px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+.botones:hover {
+    -fx-background-color: #666666;
+}
+
+.botonOcultar {
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+    -fx-border-color: #b2b2b2;   /* contorno negro */
+    -fx-border-width: 1px;     /* grosor del contorno */
+}
+
+.labels {
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0 0 0;
+}
+
+.labels-title {
+    -fx-font-size: 20px;
+    -fx-underline: true;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0 0 0;
+}
+
+

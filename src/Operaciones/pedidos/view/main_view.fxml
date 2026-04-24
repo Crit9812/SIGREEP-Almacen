@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="Operaciones.pedidos.controller.MainController"
+           stylesheets="@/Operaciones/pedidos/style/estilos.css">
+
+    <BorderPane fx:id="mainLayout">
+        <center>
+            <SplitPane dividerPositions="0.03">
+                <VBox fx:id="contenedor" styleClass="contenedor">
+                    <VBox styleClass="opciones">
+                        <HBox alignment="CENTER_LEFT">
+                            <CheckBox fx:id="miCheckBoxSeleccionarTodo" text="Seleccionar todo" styleClass="custom-check">
+                                <HBox.margin>
+                                    <Insets left="25"/>
+                                </HBox.margin>
+                            </CheckBox>
+                            <Button styleClass="botones" onMouseClicked="#eliminarProducto">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/eliminar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button >
+                            <Label fx:id="lblEliminar" text="Eliminar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+                            <Region fx:id="expansor"/>
+
+                            <Button styleClass="botones" onMouseClicked="#abrirFormularioPedido">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/agregar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Label fx:id="lblAgregar" text="Agregar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets  top="0" right="40" bottom="0" left="10"/>
+                                </HBox.margin>
+                            </Label>
+                            <Button styleClass="botones" onMouseClicked="#descargar">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/descargar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Label fx:id="lblDescargar" text="Descargar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets  top="0" right="40" bottom="0" left="10"/>
+                                </HBox.margin>
+                            </Label>
+                        </HBox>
+                    </VBox>
+
+                    <!-- TABLA -->
+                    <VBox fx:id="contenedorTabla" styleClass="tabla" alignment="CENTER">
+                        <padding>
+                            <Insets left="40" right="40"/>
+                        </padding>
+                        <TableView fx:id="contenidoTabla" styleClass="contenidoTable">
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <columns>
+                                <TableColumn fx:id="colSelect"
+                                             prefWidth="70"
+                                             minWidth="70"
+                                             maxWidth="70"
+                                             resizable="false"/>
+                                <TableColumn fx:id="colClaveProduct" text="Id"
+                                             prefWidth="120"
+                                             minWidth="120"
+                                             maxWidth="120"
+                                             resizable="false"/>
+                                <TableColumn fx:id="colProducto" text="Producto"
+                                             prefWidth="200"
+                                             minWidth="200"
+                                             maxWidth="200"
+                                             resizable="false"/>
+                                <TableColumn fx:id="colDescripcionProducto" text="Descripcion" />
+                                <TableColumn fx:id="colCantidad" text="Cantidad"
+                                             prefWidth="100"
+                                             minWidth="100"
+                                             maxWidth="100"
+                                             resizable="false"/>
+                                <TableColumn fx:id="colPresentacion" text="Presentación"
+                                             prefWidth="150"
+                                             minWidth="150"
+                                             maxWidth="150"
+                                             resizable="false"/>
+                                <TableColumn fx:id="colFactor" text="Factor"
+                                             prefWidth="100"
+                                             minWidth="100"
+                                             maxWidth="100"
+                                             resizable="false"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </VBox>
+            </SplitPane>
+        </center>
+    </BorderPane>
+</StackPane>

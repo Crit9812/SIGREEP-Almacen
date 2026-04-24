@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:id="root"
+           fx:controller="Reportes.inventario.controller.DetalleInventarioController"
+           prefHeight="520"
+           prefWidth="760"
+           style="-fx-background-color: white;"
+           stylesheets="@/Reportes/inventario/style/estilos.css">
+    <BorderPane>
+        <top>
+            <VBox spacing="10" style="-fx-background-color: white;">
+                <padding>
+                    <Insets top="20" right="20" bottom="10" left="20"/>
+                </padding>
+
+                <!-- ============ MODIFICAR ESTA SECCIÓN ============ -->
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label fx:id="lblNombre"
+                           text="Producto"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"
+                           HBox.hgrow="ALWAYS"/>
+
+                    <Region fx:id="expansor"/>
+
+                    <Button fx:id="btnAgregarArticulo" styleClass="botones" onMouseClicked="#abrirFormularioCompraDesdeBoton">
+                        <graphic>
+                            <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/agregar.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Label fx:id="lblAgregar" text="Agregar producto" styleClass="labels">
+                        <HBox.margin>
+                            <Insets right="10" left="10"/>
+                     </HBox.margin>
+                    </Label>
+                </HBox>
+
+                <GridPane hgap="12" vgap="6">
+                    <!-- FILA 0: Marca -->
+                    <Label text="Marca:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblMarca" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <!-- FILA 1: Material -->
+                    <Label text="Material:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblMaterial" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <!-- FILA 2: Unidad de medida -->
+                    <Label text="Unidad de medida:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblUnidad" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <!-- FILA 3: Presentación -->
+                    <Label text="Presentación:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblPresentacion" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                    <!-- FILA 4: Factor -->
+                    <Label text="Factor:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblFactor" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                    <!-- FILA 5: Clasificación -->
+                    <Label text="Clasificación:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblClasificacion" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                    <!-- FILA 6: Descripción -->
+                    <Label text="Descripción:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblDescripcion"
+                           GridPane.rowIndex="6"
+                           GridPane.columnIndex="1"
+                           wrapText="true"/>
+                </GridPane>
+            </VBox>
+        </top>
+        <center>
+            <ScrollPane fx:id="scrollPane"
+                        fitToWidth="true"
+                        hbarPolicy="AS_NEEDED"
+                        vbarPolicy="AS_NEEDED"
+                        style="-fx-background-color: white; -fx-border-color: transparent;">
+                <content>
+                    <VBox fx:id="contenedorDetalles"
+                          spacing="12"
+                          alignment="TOP_LEFT"
+                          style="-fx-padding: 20; -fx-background-color: white;"/>
+                </content>
+            </ScrollPane>
+        </center>
+        <bottom>
+            <HBox alignment="CENTER" spacing="12" style="-fx-background-color: white;">
+                <padding>
+                    <Insets top="10" bottom="20" right="30"/>
+                </padding>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btnCerrar" text="Cerrar" onAction="#cerrarVentana" styleClass="boton-formulario"/>
+            </HBox>
+        </bottom>
+    </BorderPane>
+    <fx:include fx:id="overlayPane" source="/Compartido/view/label.fxml"/>
+</StackPane>

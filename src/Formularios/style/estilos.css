@@ -1,0 +1,65 @@
+.boton{
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-pref-width: 200;
+    -fx-pref-height: 35;
+    -fx-background-radius: 5;
+}
+
+.boton:hover {
+    -fx-background-color: #444;
+}
+
+.botonAgregarUbi{
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-max-width: 25;
+    -fx-max-height: 25;
+    -fx-background-radius: 5;
+}
+
+.botonAgregarUbi:hover {
+    -fx-background-color: #444;
+}
+
+.modo-tabs .tab-header-area .tab-header-background {
+    -fx-background-color: white;
+}
+
+.modo-tabs .tab-header-area {
+    -fx-translate-x: -8;
+}
+
+.modo-tabs .tab {
+    -fx-padding: 5 18 5 18;
+    -fx-font-size: 12px;
+}
+
+.modo-tabs .tab:selected {
+    -fx-background-color: #000000;
+}
+
+.modo-tabs .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.modo-tabs-sin-header .tab-header-area {
+    -fx-max-height: 0;
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    visibility: hidden;
+}
+
+.modo-tabs-sin-header .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.modo-tabs-sin-header .tab-content-area {
+    -fx-padding: 0;
+}

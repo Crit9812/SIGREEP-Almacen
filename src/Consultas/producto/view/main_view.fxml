@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="Consultas.producto.controller.MainController"
+           stylesheets="@/Consultas/producto/style/estilos.css">
+
+    <BorderPane fx:id="mainLayout">
+        <center>
+            <SplitPane dividerPositions="0.03">
+                <VBox fx:id="contenedor" styleClass="contenedor">
+
+                    <!-- OPCIONES -->
+                    <VBox styleClass="opciones">
+                        <HBox fx:id="rootHBox" spacing="0" alignment="CENTER_LEFT">
+
+                            <!-- BOTÓN AGREGAR -->
+                            <Button styleClass="botones" onMouseClicked="#formularioNuevoProducto">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/agregar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="75"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblAgregar" text="Agregar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+                            <!-- BOTÓN IMPORTAR -->
+                            <Button styleClass="botones" onAction="#importarDatos">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/importar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblImportar" text="Importar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+                            <!-- BOTÓN EXPORTAR -->
+                            <Button styleClass="botones" onAction="#exportarDatos">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/exportar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblExportar" text="Exportar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+                            <Button styleClass="botones"  onMouseClicked="#exportarPlantilla">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/plantilla.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets left="30"/>
+                                </HBox.margin>
+                            </Button>
+                            <Label fx:id="lblPlantilla" text="Descargar plantilla" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets left="10"/>
+                                </HBox.margin>
+                            </Label>
+
+
+                            <!-- EXPANSOR PARA MOVER LA BARRA A LA IZQUIERDA -->
+                            <Region fx:id="expansor" />
+
+                            <!-- BARRA DE BÚSQUEDA -->
+                            <TextField fx:id="buscador" promptText="Buscar producto por nombre o id" styleClass="barraBusqueda">
+                                <HBox.margin>
+                                    <Insets right="20"/>
+                                </HBox.margin>
+                            </TextField>
+
+                            <!-- Recuadro de imagen estático -->
+                            <StackPane fx:id="contenedorImagen" style="-fx-border-color: #bbb; -fx-border-width: 2;">
+                                <ImageView fx:id="previewImage"  preserveRatio="true"/>
+                                <HBox.margin>
+                                    <Insets right="70"/>
+                                </HBox.margin>
+                            </StackPane>
+                        </HBox>
+                    </VBox>
+
+                    <!-- TABLA MÁS ABAJO -->
+                    <VBox fx:id="contenedorTabla" styleClass="tabla" alignment="CENTER" spacing="0">
+                        <padding>
+                            <Insets left="40" right="40" top="10" bottom="10"/>
+                        </padding>
+
+                        <TableView fx:id="contenidoTabla" styleClass="contenidoTabla">
+                            <placeholder>
+                                <Label text="No hay resultados que mostrar" styleClass="placeholder-label"/>
+                            </placeholder>
+                            <columns>
+                                <TableColumn fx:id="colSelect" prefWidth="70" />
+                                <TableColumn fx:id="colIdProducto" text="ID" prefWidth="70" />
+                                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150" />
+                                <TableColumn fx:id="colCategoria" text="Categoria" prefWidth="100" />
+                                <TableColumn fx:id="colEtiqueta" text="Etiqueta" prefWidth="200" />
+                                <TableColumn fx:id="colMarca" text="Marca" prefWidth="150" />
+                                <TableColumn fx:id="colMaterial" text="Material" prefWidth="150" />
+                                <TableColumn fx:id="colUnidadMedida" text="UnidadMedida" prefWidth="100" />
+                                <TableColumn fx:id="colDescripcion" text="Descripcion" prefWidth="250" />
+                                <TableColumn fx:id="colInventarioMin" text="InventarioMin" prefWidth="100" />
+                                <TableColumn fx:id="colImagen" text="urlImagen" prefWidth="300" />
+                            </columns>
+                        </TableView>
+                    </VBox>
+
+                </VBox>
+            </SplitPane>
+        </center>
+    </BorderPane>
+
+</StackPane>

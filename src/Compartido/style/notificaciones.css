@@ -1,0 +1,132 @@
+.root-notificaciones {
+    -fx-background-color: #f5f7fa;
+    -fx-font-family: "Segoe UI", "System", -apple-system, sans-serif;
+}
+
+.header-notificaciones {
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 3);
+}
+
+.titulo-notificaciones {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Semibold", "System";
+    -fx-letter-spacing: 0.3px;
+}
+
+.lista-notificaciones {
+    -fx-background-insets: 0;
+    -fx-background-color: white;
+    -fx-padding: 0;
+    -fx-border-color: #e0e4e9;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* Estilo base de las celdas */
+.lista-notificaciones .list-cell {
+    -fx-padding: 14px 18px;
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-font-size: 13px;
+}
+
+/* Notificación no leída */
+.lista-notificaciones .list-cell.notificacion-activa {
+    -fx-background-color: #dcf0da;
+    -fx-border-color: #c0ddc0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-effect: innershadow(gaussian, rgba(145, 212, 133, 0.15), 3, 0, 0, 0);
+}
+
+/* Badge del ID - estado leído */
+.lista-notificaciones .list-cell .badge-id {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 16px;
+    -fx-padding: 4px 10px;
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-min-width: 45px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+}
+
+/* Badge del ID - no leído */
+.lista-notificaciones .list-cell.notificacion-activa .badge-id {
+    -fx-background-color: #91d485;
+    -fx-text-fill: #1e3c5c;
+    -fx-font-weight: 700;
+    -fx-effect: dropshadow(gaussian, rgba(145, 212, 133, 0.2), 4, 0, 0, 1);
+}
+
+/* Texto de la descripción */
+.lista-notificaciones .list-cell .texto-notificacion {
+    -fx-fill: #4a5568;
+    -fx-font-size: 13px;
+}
+
+.lista-notificaciones .list-cell.notificacion-activa .texto-notificacion {
+    -fx-fill: #333333;
+    -fx-font-weight: 600;
+}
+
+/* Hover effect */
+.lista-notificaciones .list-cell:hover {
+    -fx-background-color: #e8e8e8;  /* Hover para leídas */
+    -fx-cursor: hand;
+}
+
+.lista-notificaciones .list-cell.notificacion-activa:hover {
+    -fx-background-color: #cce8ca;
+}
+
+/* Color de selección personalizado */
+.lista-notificaciones .list-cell:selected {
+    -fx-background-color: #91d485 !important;
+}
+
+.lista-notificaciones .list-cell:selected .badge-id {
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}
+
+.lista-notificaciones .list-cell:selected .texto-notificacion {
+    -fx-fill: #333333;
+    -fx-font-weight: 700;
+}
+
+/* Scrollbar personalizada */
+.lista-notificaciones .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12px;
+}
+
+.lista-notificaciones .scroll-bar:vertical .thumb {
+    -fx-background-color: #cbd5e1;
+    -fx-background-radius: 6px;
+}
+
+.lista-notificaciones .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #91d485;
+}
+
+.lista-notificaciones .scroll-bar:vertical .track {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 6px;
+}
+
+/* Mensaje inferior */
+.label-mensaje {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 12px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 10px 18px;
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+}

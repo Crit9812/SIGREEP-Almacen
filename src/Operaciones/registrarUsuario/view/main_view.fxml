@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:id="root"
+           fx:controller="Operaciones.registrarUsuario.controller.MainController"
+           stylesheets="@/Operaciones/registrarUsuario/style/estilos.css">
+
+    <BorderPane fx:id="mainLayout">
+        <center>
+            <SplitPane dividerPositions="0.03">
+                <VBox fx:id="contenedor" styleClass="contenedor">
+                    <VBox styleClass="opciones">
+                        <HBox alignment="CENTER_RIGHT" >
+                            <Button styleClass="botones" onMouseClicked="#abrirNuevoUsuario">
+                                <graphic>
+                                    <ImageView fitWidth="20" fitHeight="18" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/img/agregar.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Label text="Agregar" styleClass="labels">
+                                <HBox.margin>
+                                    <Insets top="0" right="40" bottom="0" left="10"/>
+                                </HBox.margin>
+                            </Label>
+                        </HBox>
+                    </VBox>
+
+                    <!-- TABLA -->
+                    <VBox fx:id="contenedorTabla" styleClass="tabla" alignment="CENTER">
+                        <padding>
+                            <Insets left="40" right="40"/>
+                        </padding>
+                        <TableView fx:id="contenidoTabla" styleClass="contenidoTable">
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <columns>
+                                <!-- Columna FIXED (botones) -->
+                                <TableColumn fx:id="colSelect"
+                                             prefWidth="70"
+                                             minWidth="70"
+                                             maxWidth="70"
+                                             resizable="false" />
+
+                                <!-- Columna SEMI-FIXED (ID/Clave) -->
+                                <TableColumn fx:id="colClaveUsuario"
+                                             text="Clave"
+                                             prefWidth="80"
+                                             minWidth="60"
+                                             maxWidth="100" />
+
+                                <!-- Columnas AUTO-AJUSTABLES (sin ancho fijo) -->
+                                <TableColumn fx:id="colNombre" text="Nombre" />
+                                <TableColumn fx:id="colApellidoP" text="Apellido paterno" />
+                                <TableColumn fx:id="colApellidoM" text="ApellidoMaterno" />
+                                <TableColumn fx:id="colNombreUsuario" text="Nombre de usuario" />
+                                <TableColumn fx:id="colRol" text="Rol" />
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </VBox>
+            </SplitPane>
+        </center>
+    </BorderPane>
+</StackPane>

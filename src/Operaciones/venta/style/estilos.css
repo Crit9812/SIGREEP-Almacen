@@ -1,0 +1,163 @@
+.root {
+    -fx-background-color: #f0f0f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.split-pane-divider, .split-pane {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.contenedor{
+    -fx-background-color: #ebebeb;
+}
+
+.opciones {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15;
+    -fx-spacing: 20;
+}
+
+.custom-check {
+    -fx-font-size: 10px;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+    -fx-label-padding: 0 0 0 10;
+}
+
+.custom-check .box {
+    -fx-border-color: #333;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-padding: 5;
+}
+
+.custom-check .text {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-underline: true;
+}
+
+.custom-check:selected .box {
+    -fx-background-color: #333;
+    -fx-border-color: #333;
+}
+
+.botones {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #000000;
+    -fx-padding: 5 5;
+    -fx-cursor: hand;
+}
+
+.botones:hover {
+    -fx-background-color: #666666;
+}
+
+.labels {
+    -fx-font-size: 16px;
+    -fx-underline: true;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.barraBusqueda {
+    -fx-background-color: #fff;
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 400px;
+    -fx-background-radius: 10px 0 0 10px;
+    -fx-border-radius: 10px 0 0 10px;
+    -fx-border-color: #333;
+    -fx-border-width: 1px 0 1px 1px;
+    -fx-prompt-text-fill: gray;
+    -fx-padding: 0 0 0 8px;
+}
+
+.barraBusquedaCliente {
+    -fx-background-color: #fff;
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 400px;
+    -fx-background-radius: 10px 0 0 10px;
+    -fx-border-radius: 10px 0 0 10px;
+    -fx-border-color: #333;
+    -fx-border-width: 1px 0 1px 1px;
+    -fx-prompt-text-fill: gray;
+    -fx-padding: 0 0 0 8px;
+}
+
+.factura{
+    -fx-background-color: #fff;
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 200px;
+    -fx-background-radius: 10px 0 0 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #333;
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-prompt-text-fill: gray;
+    -fx-padding: 0 0 0 8px;
+}
+
+.tabla {
+    -fx-background-color: #ebebeb;
+}
+
+.contenidoTable {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 0 0 0 0;
+    -fx-text-fill: black;
+}
+
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #333;
+}
+
+.table-view {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.table-view .table-row-cell .text {
+    -fx-fill: black;
+}
+
+.table-view .table-row-cell:filled:selected,
+.table-view .table-row-cell:filled:selected:focused {
+    -fx-text-fill: black;
+    -fx-background-color: #91d485;
+}
+
+.botonConfirmar {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #000000;
+    -fx-padding: 5 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 30px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+.combo-sin-flecha .arrow-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.combo-sin-flecha .arrow {
+    -fx-shape: "";
+}

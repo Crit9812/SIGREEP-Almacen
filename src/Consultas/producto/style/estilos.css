@@ -1,0 +1,120 @@
+.root {
+    -fx-background-color: #f0f0f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.split-pane-divider, .split-pane {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.contenedor-opciones {
+    -fx-background-color: #333;
+    -fx-padding: 5;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.contenedor{
+    -fx-background-color: #ebebeb;
+}
+
+/* 🔹 Contenedor gris */
+.opciones {
+    -fx-background-color: #ffffff;  /* Gris claro */
+    -fx-padding: 15;               /* Espaciado interno */
+    -fx-spacing: 20;               /* Separación entre elementos */
+}
+
+.botones {
+    -fx-font-size: 14px;      /* Tamaño de letra */
+    -fx-font-weight: bold;    /* Negrita */
+    -fx-text-fill: white;     /* 🔹 Color del texto */
+    -fx-background-color: #000000;   /* Fondo negro */
+    -fx-padding: 5 5;
+    -fx-cursor: hand;               /* Mano al pasar el mouse */
+}
+
+.botones:hover {
+    -fx-background-color: #666666;  /* Gris oscuro al pasar */
+}
+
+.labels {
+    -fx-font-size: 16px;
+    -fx-underline: true;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.barraBusqueda {
+    -fx-background-color: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #333;
+    -fx-border-width: 1px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-image: url("/img/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5 50%;
+    -fx-background-size: 16 16;
+    -fx-padding: 0 0 0 30px;
+}
+
+.tabla {
+    -fx-background-color: #ebebeb;     /* Fondo de la tabla */
+}
+
+.contenidoTabla {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 0 0 0 0;
+    -fx-text-fill: black;
+}
+
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-text-fill: white;          /* texto blanco en encabezado */
+    -fx-font-weight: bold;
+    -fx-background-color: #333;
+}
+
+/* Scrollbars automáticos */
+.table-view {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.table-view .table-row-cell .text {
+    -fx-fill: black; /* color de texto de todas las celdas */
+}
+
+/* Evitar azul de selección */
+.table-view .table-row-cell:filled:selected,
+.table-view .table-row-cell:filled:selected:focused {
+    -fx-text-fill: black; /* aunque no siempre funciona sin el anterior */
+    -fx-background-color: #91d485;
+}
+
+.botonConfirmar {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #000000;
+    -fx-padding: 5 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 150px;     /* Ancho preferido */
+    -fx-pref-height: 30px;     /* Alto preferido */
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+
+

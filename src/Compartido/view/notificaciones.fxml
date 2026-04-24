@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Compartido.controller.notificacionesController"
+            prefWidth="500" prefHeight="600"
+            stylesheets="@/Compartido/style/notificaciones.css"
+            styleClass="root-notificaciones">
+
+    <top>
+        <HBox spacing="10" styleClass="header-notificaciones">
+            <padding>
+                <Insets top="10" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label text="Notificaciones" styleClass="titulo-notificaciones"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ListView fx:id="listaNotificaciones" styleClass="lista-notificaciones"/>
+    </center>
+
+    <bottom>
+        <Label fx:id="labelMensaje" styleClass="label-mensaje" BorderPane.alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="8" right="15" bottom="8" left="15"/>
+            </padding>
+        </Label>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="navbar"
+      prefWidth="55"
+      minWidth="55"
+      maxWidth="55"
+      maxHeight="Infinity"
+      styleClass="navbar"
+      fx:controller="Compartido.controller.navbarController"
+      stylesheets="@/Compartido/style/estilos.css">
+
+    <HBox styleClass="navbar-hbox">
+        <Button fx:id="botonOperaciones"
+                onMouseEntered="#showLabelOperaciones"
+                onMouseExited="#hideLabelOperaciones"
+                onMouseClicked="#ventanaOperaciones"
+                styleClass="boton">
+            <graphic>
+                <ImageView>
+                    <image><Image url="@/img/operaciones.png" /></image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label fx:id="labelOperaciones" text="Operaciones" styleClass="hover-label"
+               managed="false" visible="false"/>
+    </HBox>
+
+    <HBox styleClass="navbar-hbox">
+        <Button fx:id="botonReportes"
+                onMouseEntered="#showLabelReportes"
+                onMouseExited="#hideLabelReportes"
+                onMouseClicked="#ventanaReportes"
+                styleClass="boton">
+            <graphic>
+                <ImageView>
+                    <image><Image url="@/img/reportes.png" /></image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label fx:id="labelReportes" text="Reportes" styleClass="hover-label"
+               managed="false" visible="false" />
+    </HBox>
+
+    <HBox styleClass="navbar-hbox">
+        <Button fx:id="botonConsultas"
+                onMouseEntered="#showLabelConsultas"
+                onMouseExited="#hideLabelConsultas"
+                onMouseClicked="#ventanaConsultas"
+                styleClass="boton">
+            <graphic>
+                <ImageView>
+                    <image><Image url="@/img/consultas.png" /></image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label fx:id="labelConsultas" text="Consultas" styleClass="hover-label"
+               managed="false" visible="false" />
+    </HBox>
+
+    <HBox styleClass="navbar-hbox">
+        <Button fx:id="botonConfiguracion"
+                onMouseEntered="#showLabelConfiguracion"
+                onMouseExited="#hideLabelConfiguracion"
+                onMouseClicked="#ventanaConfiguracion"
+                styleClass="boton">
+            <graphic>
+                <ImageView>
+                    <image><Image url="@/img/configuracion.png" /></image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label fx:id="labelConfiguracion" text="Configuración" styleClass="hover-label"
+               managed="false" visible="false" />
+    </HBox>
+
+    <Region VBox.vgrow="ALWAYS" prefHeight="9999" />
+
+    <HBox styleClass="navbar-hbox">
+        <VBox.margin>
+            <Insets bottom="25"/>
+        </VBox.margin>
+        <Button fx:id="botonPausa"
+                onMouseClicked="#enEspera"
+                styleClass="boton">
+            <graphic>
+                <ImageView>
+                    <image><Image url="@/img/pausa1.png" /></image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+
+
+
+</VBox>

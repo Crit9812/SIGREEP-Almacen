@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<Pane xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:id="overlayPane"
+      stylesheets="@/Compartido/style/estilos.css"
+      pickOnBounds="false">
+
+    <Label fx:id="labelOperaciones" text="Operaciones" styleClass="hover-label"
+           managed="false" visible="false"/>
+    <Label fx:id="labelReportes" text="Reportes" styleClass="hover-label"
+           managed="false" visible="false"/>
+    <Label fx:id="labelConsultas" text="Consultas" styleClass="hover-label"
+           managed="false" visible="false"/>
+    <Label fx:id="labelConfiguracion" text="Ajustes" styleClass="hover-label"
+           managed="false" visible="false"/>
+
+</Pane>

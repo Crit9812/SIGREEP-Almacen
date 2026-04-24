@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane fx:id="panel" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Compartido.controller.encabezadoController"
+            styleClass="navbar_top"
+            stylesheets="@/Compartido/style/estilos.css">
+    <left>
+        <TextField fx:id="searchBar" promptText="Buscar en el inventario" styleClass="busqueda"/>
+    </left>
+    <right>
+        <HBox styleClass="contenedor-navbar-top">
+            <Label fx:id="labelUsuario" text="Usuario" styleClass="labelUsuario"/>
+            <Button styleClass="botones-navbar-top" translateY="-3" onAction="#salir">
+                <graphic>
+                    <ImageView fx:id="iconoNavbar">
+                        <image><Image url="@/img/user.png"/></image>
+                    </ImageView>
+                </graphic>
+                <tooltip><Tooltip text="Cerrar Sesión"/></tooltip>
+            </Button>
+            <Button styleClass="botones-navbar-top" onAction="#actualizar">
+                <graphic>
+                    <ImageView fx:id="iconoNavbar2">
+                        <image><Image url="@/img/cloud.png"/></image>
+                    </ImageView>
+                </graphic>
+                <tooltip><Tooltip text="Actualizar"/></tooltip>
+            </Button>
+            <Button styleClass="botones-navbar-top" translateY="-0.8" onAction="#abrirNotificaciones">
+                <graphic>
+                    <ImageView fx:id="iconoNavbar3">
+                        <image><Image url="@/img/sobreC.png"/></image>
+                    </ImageView>
+                </graphic>
+                <tooltip><Tooltip text="Notificaciones"/></tooltip>
+            </Button>
+            <StackPane HBox.hgrow="ALWAYS" alignment="BOTTOM_RIGHT">
+                <Label fx:id="labelTitulo" text="" styleClass="tituloVentana"/>
+            </StackPane>
+        </HBox>
+    </right>
+</BorderPane>
+
+
+

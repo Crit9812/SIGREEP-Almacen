@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           xmlns="http://javafx.com/javafx"
+           fx:controller="Consultas.controller.MainController"
+           fx:id="root"
+           stylesheets="@/Consultas/style/estilos.css">
+
+    <VBox fx:id="contenedor" styleClass="contenedor" alignment="CENTER">
+        <GridPane fx:id="buttonGrid" styleClass="contenedor-opciones"
+                  hgap="10" vgap="10"
+                  maxWidth="Infinity" maxHeight="Infinity">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="25" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" percentHeight="50" />
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" percentHeight="50" />
+            </rowConstraints>
+
+            <!-- Fila 1 -->
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    text="Productos" onAction="#ventanaProductos"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="userIcon" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/productos.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    text="Proveedores" onAction="#ventanaProveedores"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="userIcon1" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/proveedores.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    text="Clientes" onAction="#ventanaClientes"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="userIcon2" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/clientes.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnSucursales" styleClass="grid-button" GridPane.rowIndex="0" GridPane.columnIndex="3"
+                    text="Sucursales" onAction="#ventanaSucursales"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="userIcon3" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/sucursal.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <!-- Fila 2 -->
+            <Button styleClass="grid-button" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    text="Claves" onAction="#ventanaClave"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="userIcon4" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/claves.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button styleClass="grid-button" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    text="Clasificación" onAction="#ventanaEtiquetasMarcas"
+                    maxWidth="Infinity" maxHeight="Infinity">
+                <graphic>
+                    <ImageView fx:id="userIcon5" preserveRatio="true">
+                        <image>
+                            <Image url="@/img/etiquetas.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </GridPane>
+    </VBox>
+</StackPane>

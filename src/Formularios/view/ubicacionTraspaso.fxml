@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Formularios.controller.ControllerUbicacionTraspaso"
+            prefHeight="500"
+            prefWidth="700"
+            style="-fx-background-color: white;"
+            stylesheets="@/Formularios/style/estilos.css">
+    <top>
+        <VBox style="-fx-background-color: white;" alignment="CENTER">
+            <padding>
+                <Insets top="15" bottom="10" left="0" right="0"/>
+            </padding>
+            <Label fx:id="lblTitulo"
+                   text="Ubicaciones"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fx:id="scrollPane"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    style="-fx-background-color: white; -fx-border-color: transparent;">
+            <content>
+                <VBox spacing="15"
+                      fx:id="contenedorPrincipal"
+                      alignment="TOP_LEFT"
+                      style="-fx-padding: 20; -fx-background-color: white;">
+                    <Label text="Resumen del traspaso"
+                           style="-fx-font-size: 13px; -fx-font-weight: bold;"/>
+                    <VBox fx:id="contenedorDetalles" spacing="12"/>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-background-color: white;">
+            <padding>
+                <Insets top="20" bottom="20" left="0" right="0"/>
+            </padding>
+            <Button fx:id="btnCancelar" text="Cancelar" onAction="#cerrarFormulario" styleClass="boton"/>
+            <Button fx:id="btnConfirmar" text="Confirmar" onAction="#confirmarUbicaciones" styleClass="boton"/>
+        </HBox>
+    </bottom>
+</BorderPane>
